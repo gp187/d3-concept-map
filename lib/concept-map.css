@@ -1,0 +1,147 @@
+/* hide comments */
+#hidden-comments {
+  display: none;
+}
+#show-comments {
+  margin: 20px 0;
+}
+
+/* ditem carousel */
+#ditem-container {
+  position: relative;
+  width: 750px;
+  height: 600px;
+  margin: 20px auto;
+  /* vertical space = (total height - ditem height - height of bottom thing) / 2 */
+  padding-top: 65px;
+}
+
+#ditems {
+  margin: 0;
+  height: 380px;
+}
+#ditems li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+#ditems li.first {
+  display: block;
+}
+#ditems li > a {
+  position: relative;
+  display: block;
+  width: 750px;
+}
+#ditems li > a:hover {
+  border: 0;
+}
+#ditems h2 {
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: 250px;
+  background-color: #fff;
+  padding: 10px 30px;
+}
+#ditems li > a h2, #ditems li > a .date {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#ditems li > a:hover h2, #ditems li > a:hover .date {
+  background-color: #000;
+  color: #fff;
+}
+#ditems .date {
+  position: absolute;
+  right: 0;
+  top: 300px;
+  color: #999;
+  background-color: #fff;
+  padding: 5px 30px 5px 10px;
+}
+#ditems p {
+  margin-top: 20px;
+  width: 500px;
+}
+#transport {
+  position: absolute;
+  top: 410px; /* 350 + top pad of container */
+  width: 750px;
+}
+#transport a {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  z-index: 99;
+}
+#next-ditem {
+  right: 0;
+}
+#transport a:hover {
+  border: 0;
+  background-color: #000;
+}
+
+#ditem-thumbs {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  margin: 0;
+  width: 750px;
+  z-index: 100;
+}
+.conceptmap #ditem-thumbs li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.conceptmap #ditem-thumbs li a {
+  display: block;
+  border: 6px solid #fff;
+}
+.conceptmap #ditem-thumbs li a:hover {
+  border-color: #0da4d3;
+}
+
+.conceptmap #controls {
+  margin-top: 20px;
+  width: 750px;
+}
+.conceptmap #controls .btn {
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  z-index: 99;
+}
+
+/* map */
+.conceptmap svg {
+  font-family: Abel,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+}
+.conceptmap .ditem > rect {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+.conceptmap path {
+  fill: none;
+}
+.conceptmap .ditem, .conceptmap .node, .conceptmap .detail text, .conceptmap .all-ditems {
+  cursor: pointer;
+}
+.conceptmap .all-ditems {
+  fill: #aaa;
+}
+.conceptmap .detail a text:hover, .conceptmap text.all-ditems:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<link href="lib/concept-map.css" rel="stylesheet"></link>
+
+<script src="lib/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="lib/d3.min.js" type="text/javascript"></script>
+<script src="lib/packages.js" type="text/javascript"></script>
+<script src="lib/concept-map.js" type="text/javascript"></script>
+
+<script>
+$(function(){
+	plotConceptMap();
+});
+function plotConceptMap()
+{
+	d3.json("metadata.json", function(dataJson) {
+		var plot = new ConceptMap("graph", "graph-info", dataJson);
+	});
+}
+</script>
+<style>
+body{
+padding-top: 10px;
+}
+</style>
+</head>
+<body>
+				<div id="graph" class="conceptmap" ></div>
+				<div id="graph-info"></div>
+</body>
+</html>
